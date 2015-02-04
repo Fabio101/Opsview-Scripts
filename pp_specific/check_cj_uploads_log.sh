@@ -5,7 +5,7 @@
 # DESCRIPTION :
 #		Checks if the cj_uploads.log file has changed since the last execution of the script. 
 # 		To be used in conjunction with Nagios an run at hourly intervals
-# 		Place in 
+# 		Place in /usr/local/nagios/libexec/
 #
 
 cj_log_path="/var/log/placementpartner/cj_uploads.log"

@@ -5,7 +5,7 @@
 # DESCRIPTION :
 #		Checks if the event_processor.log file has changed since the last execution of the script. 
 # 		To be used in conjunction with Nagios an run at hourly intervals
-# 		Place in 
+# 		Place in /usr/local/nagios/libexec/
 #
 
 event_log_path="/var/log/placementpartner/event_processor.log"
@@ -25,6 +25,6 @@ do
 			exit 2 #2 code means file sizes are the same, if run an hourly intervals this is 0 that means the event_processor.log file is not being updated
 		else
 			echo "Activity in event_processor.log file... All seems well."
-			exit 0 #0 means the event_processor.log file is being updated, assumed normal functionality of cj services
+			exit 0 #0 means the event_processor.log file is being updated, assumed normal functionality of the event processor
 	fi
 done < /usr/local/nagios/libexec/check_event_log.txt

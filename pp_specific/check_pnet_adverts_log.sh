@@ -5,7 +5,7 @@
 # DESCRIPTION :
 #		Checks if the pnet_adverts.log file has changed since the last execution of the script. 
 # 		To be used in conjunction with Nagios an run at hourly intervals
-# 		Place in 
+# 		Place in /usr/local/nagios/libexec/
 #
 
 pnet_log_path="/var/log/placementpartner/pnet_adverts.log"

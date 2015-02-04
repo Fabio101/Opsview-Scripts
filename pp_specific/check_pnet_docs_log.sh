@@ -5,7 +5,7 @@
 # DESCRIPTION :
 #		Checks if the go_pnet_docs.log file has changed since the last execution of the script. 
 # 		To be used in conjunction with Nagios an run at hourly intervals
-# 		Place in 
+# 		Place in /usr/local/nagios/libexec/
 #
 
 pnet_log_path="/var/log/placementpartner/go_pnet_docs.log"
@@ -22,9 +22,9 @@ do
 	if [ $pnet_log_old_size == $pnet_log_new_size ]
 		then
 			echo "No Activity in go_pnet_docs.log file... investigate!"
-			exit 2 #2 code means file sizes are the same, if run an hourly intervals this is 0 that means the cj.log file is not being updated
+			exit 2 #2 code means file sizes are the same, if run an hourly intervals this is 0 that means the go_pnet_docs.log file is not being updated
 		else
 			echo "Activity in go_pnet_docs.log file... All seems well."
-			exit 0 #0 means the cj.log file is being updated, assumed normal functionality of cj services
+			exit 0 #0 means the go_pnet_docs.log file is being updated, assumed normal functionality of pnet services
 	fi
 done < /usr/local/nagios/libexec/check_pnet_docs_log.txt
