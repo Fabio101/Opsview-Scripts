@@ -1,7 +1,7 @@
 # opsview-nrpe-scripts
 Some Scripts in use with NRPE and Opsview for customized monitoring purposes.
 
-* All scripts should be placed in </usr/local/nagios/libexec/> on any server running the opsview-agent (NRPE) daemon 
+* All scripts should be placed in /usr/local/nagios/libexec/ on any server running the opsview-agent (NRPE) daemon 
 
 ## pp_specific
 Checks specific to Parallel Software such a log file monitoring etc...
